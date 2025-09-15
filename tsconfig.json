@@ -22,6 +22,16 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/middleware.ts",
+    "src/utils/AntdComponentsRegistry.tsxry.ts",
+    ".next/types/**/*.ts",
+    "src/context/ThemeProvider.js",
+    "src/hooks/useThunks.js",
+    "app/not-found.js"
+  ],
+  "exclude": ["node_modules", ".next"]
 }
