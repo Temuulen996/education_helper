@@ -68,7 +68,7 @@ ${
 }`}
                   >
                     {level.status === "done" ? (
-                      <CheckCircle className="text-blue-500" size={40} />
+                      <CheckCircle className="text-green-700" size={40} />
                     ) : level.status === "unlock" ? (
                       <Unlock className="text-gray-400" size={30} />
                     ) : (
