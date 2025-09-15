@@ -1,5 +1,5 @@
 import { Divider } from "antd";
-import ProductCard from "./product-card";
+import CourseCard from "./course-card";
 
 const ProductList = ({ label, listData }: ProductListProps) => {
   return (
@@ -7,7 +7,7 @@ const ProductList = ({ label, listData }: ProductListProps) => {
       <p className="font-bold  text-lg">{label}</p>
       <div className="grid grid-cols-2 xl:grid-cols-6 sm:grid-cols-3 gap-x-3 gap-y-12">
         {listData.map((product, index) => (
-          <ProductCard key={product.id + index} product={product} />
+          <CourseCard key={product.id + index} product={product} />
         ))}
       </div>
       <Divider />

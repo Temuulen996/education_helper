@@ -5,10 +5,10 @@ import { Button } from "antd";
 import { OrderedListOutlined, TruckOutlined } from "@ant-design/icons";
 import { useRouter } from "@/src/i18n/navigation";
 
-interface ProductCardProps {
+interface CourseCardProps {
   product: ProductType;
 }
-const ProductCard = ({ product }: ProductCardProps) => {
+const CourseCard = ({ product }: CourseCardProps) => {
   const router = useRouter();
 
   return (
@@ -26,21 +26,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <div className="h-1/3 flex flex-col justify-between ">
         <div>
           <div className="flex flex-row gap-4 items-center">
-            <div className="text-green-500 font-bold text-sm md:text-md">
-              <BText mn="Одоо" en="Now" />{" "}
-              {product.discountPercent
-                ? product.price -
-                  (product.price * product.discountPercent) / 100
-                : product.price}{" "}
-              ₮
-            </div>
-            {product.discountPercent ? (
-              <div className=" text-xs md:text-sm line-through">
-                {product.price} ₮
-              </div>
-            ) : (
-              <></>
-            )}
+            <div className="text-green-500 font-bold text-sm md:text-md"></div>
           </div>
           <div className=" h-5 w-full text-wrap truncate overflow-hidden mb-2">
             {product.description}
@@ -70,4 +56,4 @@ const ProductCard = ({ product }: ProductCardProps) => {
   );
 };
 
-export default ProductCard;
+export default CourseCard;

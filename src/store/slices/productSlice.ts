@@ -10,7 +10,7 @@ const products: ProductType[] = [
     id: "1",
 
     imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     name: "bread",
     category: "2",
@@ -21,136 +21,15 @@ const products: ProductType[] = [
     rating: 50,
   },
   {
-    id: "2",
+    id: "1",
 
     imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "bread",
-    description:
-      "asdsadsdasdadssdasdasdaasdsadsdasdadssdasdasda asdsadsdasdadssdasdasdaa sdsadsdasdadssdas dasdaasdsadsd  asdadssdasdas daasdsadsdasda dssda sdasdaasd sadsdasdads sdasdasdaasdsa dsdasdadssdasdasda",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "3",
-
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "1",
-    description: "bread",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "4",
-
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "3",
-    description: "bread",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "5",
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     name: "bread",
     category: "2",
     description: "bread",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "6",
-
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "3",
-    description: "bread",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "7",
-
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "1",
-    description:
-      "asdsadsdasdadssdasdasdaasdsadsdasdadssdasdasda asdsadsdasdadssdasdasdaa sdsadsdasdadssdas dasdaasdsadsd  asdadssdasdas daasdsadsdasda dssda sdasdaasd sadsdasdads sdasdasdaasdsa dsdasdadssdasdasda",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "8",
-
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "1",
-    description:
-      "asdsadsdasdadssdasdasdaasdsadsdasdadssdasdasda asdsadsdasdadssdasdasdaa sdsadsdasdadssdas dasdaasdsadsd  asdadssdasdas daasdsadsdasda dssda sdasdaasd sadsdasdads sdasdasdaasdsa dsdasdadssdasdasda",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "9",
-
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "4",
-    description:
-      "asdsadsdasdadssdasdasdaasdsadsdasdadssdasdasda asdsadsdasdadssdasdasdaa sdsadsdasdadssdas dasdaasdsadsd  asdadssdasdas daasdsadsdasda dssda sdasdaasd sadsdasdads sdasdasdaasdsa dsdasdadssdasdasda",
-    discountPercent: 0,
-    price: 15000,
-    review: 0,
-    rating: 50,
-  },
-  {
-    id: "10",
-
-    imgUrls: [
-      "https://images.unsplash.com/photo-1458712197423-adcdc2a426ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ],
-    name: "bread",
-    category: "4",
-    description:
-      "asdsadsdasdadssdasdasdaasdsadsdasdadssdasdasda asdsadsdasdadssdasdasdaa sdsadsdasdadssdas dasdaasdsadsd  asdadssdasdas daasdsadsdasda dssda sdasdaasd sadsdasdads sdasdasdaasdsa dsdasdadssdasdasda",
-    discountPercent: 0,
+    discountPercent: 10,
     price: 15000,
     review: 0,
     rating: 50,
