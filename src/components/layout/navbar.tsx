@@ -6,10 +6,12 @@ import { Link, usePathname, useRouter } from "@/src/i18n/navigation";
 import { Avatar, Badge, Button, Dropdown, MenuProps, Switch } from "antd";
 
 import {
+  KeyOutlined,
   LoginOutlined,
   LogoutOutlined,
   MenuOutlined,
   ShoppingCartOutlined,
+  ThunderboltOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import {
@@ -20,7 +22,7 @@ import {
   toggleLoginModal,
 } from "@/src/store/slices/globalSlice";
 
-import Logo from "../../assets/logo/logo.png";
+import Logo from "../../assets/logo/education_logo.png";
 
 import BText from "../general/text";
 
@@ -144,16 +146,9 @@ const BNavbar: React.FC<BNavbarProps> = ({
   );
 
   return (
-    <div className="shadow-md w-full h-full">
-      <section className="border-b-[1px] text-lg font-bold flex flex-row justify-between px-5 py-1">
-        <div>+976 99639229</div>
+    <div className="shadow-md w-full h-full ">
+      <section className="border-b-[1px] text-lg font-bold flex flex-row justify-end py-1 px-[5%]">
         <div className="flex flex-row gap-2 items-center">
-          <Switch
-            checked={lang === "en"}
-            onChange={handleSwitchLang}
-            checkedChildren="EN"
-            unCheckedChildren="MN"
-          />
           <Switch
             checked={theme === "dark"}
             value={theme === "dark"}
@@ -165,10 +160,10 @@ const BNavbar: React.FC<BNavbarProps> = ({
       </section>
 
       {/* Desktop Navbar */}
-      <div className="hidden md:flex justify-between items-center px-5 pr-3">
+      <div className="hidden md:flex justify-between items-center px-[5%] p-2">
         <div className="flex items-center">
           <Link href="/">
-            <div className="logo flex items-center gap-2 h p-2 mr-12 cursor-pointer">
+            <div className="logo flex items-center gap-2 h mr-12 cursor-pointer">
               <Image
                 src={Logo}
                 width={50}
@@ -176,23 +171,25 @@ const BNavbar: React.FC<BNavbarProps> = ({
                 alt="logo"
                 objectFit="contain"
               />
-              <p className="font-semibold text-xl">Bakery</p>
+              <p className="font-semibold text-xl">Education</p>
             </div>
           </Link>
           <section className="flex flex-row gap-3">{renderMenuItems()}</section>
         </div>
 
-        <div className="flex flex-row justify-between gap-4 items-center">
+        <div className="flex flex-row justify-between gap-4 items-center ">
           <div className="flex flex-row items-center gap-2">
-            <Badge count={cartCount}>
-              <Avatar
-                onClick={() => {
-                  dispatch(toggleCartDrawer(true));
-                }}
-                className="cursor-pointer  duration-200 "
-                icon={<ShoppingCartOutlined />}
-              />
-            </Badge>
+            <div className="p-2 text-xl border-2 flex items-center justify-between gap-3 border-green-400 rounded-full  text-green-400 cursor-pointer hover:bg-green-400 hover:text-white duration-200">
+              Start trial
+            </div>
+            <div className="p-2 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-full  font-bold  cursor-pointer  duration-200">
+              <div className="text-xl text-black">0</div>
+              <ThunderboltOutlined style={{ fontSize: "25px" }} />
+            </div>
+            <div className="p-2 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-full  font-bold  cursor-pointer  duration-200">
+              <div className="text-xl text-black">0</div>
+              <KeyOutlined style={{ fontSize: "25px" }} />
+            </div>
             {renderUserMenu()}
           </div>
         </div>

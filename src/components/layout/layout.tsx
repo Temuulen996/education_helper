@@ -38,7 +38,6 @@ const BLayout: React.FC<BLayoutProps> = ({ children }: BLayoutProps) => {
   const menuItems = [
     { label: "Нүүр", key: "/" },
     { label: "Сургалтууд", key: "/courses" },
-    { label: "Холбоо барих", key: "/contact" },
   ];
   const mobileBottomTabs = [
     {
@@ -100,50 +99,6 @@ const BLayout: React.FC<BLayoutProps> = ({ children }: BLayoutProps) => {
           </div>
         </div>
 
-        <Drawer
-          title={<BText mn="Сагс" en="Cart" />}
-          onClose={handleCloseCardDrawer}
-          open={visibleCartDrawer}
-        >
-          <div className="">
-            <div className=" flex h-24">
-              <div className="w-1/3 ">
-                <Image
-                  className="h-full w-full"
-                  src="https://plus.unsplash.com/premium_photo-1679064287823-fbd549bf47dd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  width={10000}
-                  height={10000}
-                  alt="Cart item"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="flex justify-between w-2/3">
-                <div className="w-full flex flex-col pl-2 justify-between">
-                  <p className="text-xl font-semibold ">Bread</p>
-                  <p className="text-md font-bold ">2400$</p>
-                </div>
-                <div>
-                  <Button onClick={() => {}} danger icon={<DeleteFilled />}>
-                    Хасах
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Divider />
-
-          <div className="absolute bottom-4 w-full flex flex-col items-center">
-            <Divider />
-            <Button
-              onClick={handleClickCheckOut}
-              type="primary"
-              className="w-1/3"
-              icon={<CheckCircleOutlined />}
-            >
-              <BText en="Checkout" mn="Төлбөр төлөх" />
-            </Button>
-          </div>
-        </Drawer>
         <Drawer placement="left" onClose={closeSideBar} open={sideBar}>
           <div className="flex flex-col space-y-4 ">
             {menuItems.map((item, index) => (
