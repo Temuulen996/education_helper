@@ -1,15 +1,20 @@
 "use client";
-import { Button, Checkbox, Form, FormProps, Input } from "antd";
+import { App, Button, Checkbox, Form, FormProps, Input } from "antd";
 import Image from "next/image";
 
 import Logo from "../../assets/logo/education_logo.png";
+import { useRouter } from "next/navigation";
 type FieldType = {
   username?: string;
   password?: string;
   remember?: string;
 };
 const SignInPage = () => {
+  const router = useRouter();
+  const { message } = App.useApp();
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    message.success("Амжилттай нэвтэрлээ.");
+    router.replace("/");
     console.log("Success:", values);
   };
 
@@ -45,7 +50,11 @@ const SignInPage = () => {
             name="basic"
             labelCol={{ span: 4 }}
             wrapperCol={{ span: 20 }}
-            initialValues={{ remember: true }}
+            initialValues={{
+              remember: true,
+              username: "temuulenuuree@gmail.com",
+              password: "456789",
+            }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"
