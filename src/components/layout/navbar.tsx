@@ -183,11 +183,11 @@ const BNavbar: React.FC<BNavbarProps> = ({
               Start trial
             </div>
             <div className="p-2 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-full  font-bold  cursor-pointer  duration-200">
-              <div className="text-xl text-black">0</div>
+              <div className="text-xl ">0</div>
               <ThunderboltOutlined style={{ fontSize: "25px" }} />
             </div>
             <div className="p-2 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-full  font-bold  cursor-pointer  duration-200">
-              <div className="text-xl text-black">0</div>
+              <div className="text-xl ">0</div>
               <KeyOutlined style={{ fontSize: "25px" }} />
             </div>
             {renderUserMenu()}

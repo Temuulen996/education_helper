@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 import "@ant-design/v5-patch-for-react-19";
 
-import BLayout from "@/src/components/layout/layout";
+import BUnauthenticatedLayout from "@/src/components/layout/unauthenticated-layout";
 
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/src/i18n/routing";
 
-export default async function AdminLayout({
+export default async function UnauthenticatedLayout({
   children,
   params,
 }: Readonly<{
@@ -19,5 +19,5 @@ export default async function AdminLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  return <BLayout>{children}</BLayout>;
+  return <BUnauthenticatedLayout>{children}</BUnauthenticatedLayout>;
 }

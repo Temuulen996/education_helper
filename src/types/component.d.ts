@@ -6,6 +6,9 @@ interface BButtonProps {
 interface BLayoutProps {
   children: React.ReactNode;
 }
+interface UnauthenticatedLayoutProps {
+  children: React.ReactNode;
+}
 interface BAdminLayoutProps {
   children: React.ReactNode;
 }

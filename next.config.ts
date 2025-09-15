@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       "m.media-amazon.com",
       "play-lh.googleusercontent.com",
       "image.similarpng.com",
+      "ds055uzetaobb.cloudfront.net",
     ],
   },
   env: {

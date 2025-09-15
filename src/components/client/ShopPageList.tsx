@@ -1,4 +1,4 @@
-import ProductCard from "./product-card";
+import ProductCard from "./course-card";
 
 interface ShopPageListProps {
   products: ProductType[];

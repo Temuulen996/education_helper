@@ -6,7 +6,7 @@ import AntdStyledComponentsRegistry from "../utils/AntdComponentsRegistry";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { useAppSelector } from "../store";
 import { themeValues } from "../utils/theme";
-
+import { App as AntdApp } from "antd";
 export function RootProvider({
   children,
 }: Readonly<{
@@ -28,7 +28,7 @@ export function RootProvider({
                 : themeValues.lightToken,
           }}
         >
-          {children}
+          <AntdApp>{children} </AntdApp>
         </ConfigProvider>
       </AntdRegistry>
     </AntdStyledComponentsRegistry>

@@ -14,8 +14,8 @@ const BFooter = () => {
         <section className="flex flex-col items-start text-sm font-bold">
           <p className=" text-center">
             <BText
-              mn="Copyright © 2024 Temuulen. Бүх эрх хуулиар хамгаалагдсан"
-              en="Copyright © 2024 Temuulen. All rights reserved"
+              mn="Copyright © 2025 Homo deus. Бүх эрх хуулиар хамгаалагдсан"
+              en="Copyright © 2025 Homo deus. All rights reserved"
             />
           </p>
         </section>
