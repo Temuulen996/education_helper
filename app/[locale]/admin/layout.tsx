@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import BAdminLayout from "@/src/components/layout/admin-layout";
 
 export const metadata: Metadata = {
-  title: "Admin",
-  description: "Bakery web app",
+  title: "Education",
+  description: "Education web app",
 };
 export default function AdminLayout({
   children,

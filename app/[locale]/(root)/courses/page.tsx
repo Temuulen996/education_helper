@@ -1,9 +1,7 @@
+import CoursesPage from "@/src/pages/client/courses-page";
+
 const Index = () => {
-  return (
-    <div>
-      <h1>Courses</h1>
-    </div>
-  );
+  return <CoursesPage />;
 };
 
 export default Index;
