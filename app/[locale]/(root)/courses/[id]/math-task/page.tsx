@@ -9,7 +9,9 @@ const OPENAI_API_KEY =
 
 const TaskPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
-  const [chatMessages, setChatMessages] = useState<{ user: string; bot: string }[]>([]);
+  const [chatMessages, setChatMessages] = useState<
+    { user: string; bot: string }[]
+  >([]);
   const [userInput, setUserInput] = useState("");
   const [mistakes, setMistakes] = useState(0); // Track the number of mistakes
   const [showChat, setShowChat] = useState(false); // Show ChatGPT after 3 mistakes
@@ -103,29 +105,28 @@ const TaskPage = () => {
     e.preventDefault();
     if (userInput.trim()) {
       sendMessageToChatGPT(userInput);
-      setUserInput(""); 
+      setUserInput("");
     }
   };
 
   const checkAnswer = (res: any) => {
     if (res === false) {
-      setMistakes((prev) => prev + 1); 
+      setMistakes((prev) => prev + 1);
     } else if (res === true && currentStep < tasks.length - 1) {
       setCurrentStep((prev) => Math.min(prev + 1, tasks.length - 1));
-      setMistakes(0); 
+      setMistakes(0);
     } else if (res === true && currentStep === tasks.length - 1) {
-      
       notification.success({
         message: "Congratulations!",
         description: "You've completed all tasks successfully! 🎉",
-        duration: 3, 
+        duration: 3,
       });
     }
 
     // Show ChatGPT after 3 mistakes
     if (mistakes + 1 === 3) {
       let firstQuestion = tasks[currentStep].gptQuestion;
-      sendMessageToChatGPT(`${firstQuestion}`);
+      sendMessageToChatGPT(`${firstQuestion} +. Монгол хэлээр тайлбарлаарай`);
       setDrawerVisible(true); // Show the chat drawer after 3 mistakes
     }
   };
@@ -156,7 +157,7 @@ const TaskPage = () => {
 
       {/* Chat Sidebar using Ant Design Drawer (Visible after 3 mistakes) */}
       <Drawer
-        title="Assistance"
+        title="Чамд тусалъя"
         placement="right"
         width={400}
         onClose={() => {

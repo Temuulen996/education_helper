@@ -7,22 +7,17 @@ import ProductList from "../../components/client/product-list";
 import { useTranslations } from "next-intl";
 
 import { useAppSelector } from "@/src/store";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
   const { products } = useAppSelector((state) => state.product);
   const t = useTranslations("HomePage");
-
-  return (
-    <div>
-      <BCarousel />
-      <ProductList
-        label={<BText en="For you" mn="Зөвхөн танд" />}
-        listData={products}
-      />
-
-      {/* <CardSlider label="asd" /> */}
-    </div>
-  );
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/courses");
+  }, []);
+  return <div></div>;
 };
 
 export default HomePage;

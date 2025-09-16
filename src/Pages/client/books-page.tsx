@@ -4,9 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { books, grades } from "../../assets/data/books-page-data";
 import { ReactReader } from "react-reader";
+import { useRouter } from "next/navigation";
 const BooksPage = () => {
   const [selectedGrade, setSelectedGrade] = useState<number | null>(1);
   const [location, setLocation] = useState<string | number>(0);
+  const router = useRouter();
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-row justify-between w-full">
@@ -39,6 +41,9 @@ const BooksPage = () => {
               className="flex flex-col p-4 border-gray-300 w-48 h-56"
             >
               <Image
+                onClick={() => {
+                  router.push(`/books/1`);
+                }}
                 src={book.img}
                 alt={book.name}
                 className="w-38 h-46 object-cover mb-2 hover:scale-110 duration-200 cursor-pointer"

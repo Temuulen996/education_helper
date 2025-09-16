@@ -14,7 +14,7 @@ const SignInPage = () => {
   const { message } = App.useApp();
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     message.success("Амжилттай нэвтэрлээ.");
-    router.replace("/");
+    router.replace("/courses");
     console.log("Success:", values);
   };
 
