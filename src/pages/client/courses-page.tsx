@@ -112,7 +112,10 @@ const CoursesPage = () => {
             </div>
             <div className="flex flex-row item-center my-4 gap-4">
               {course.lessons.map((lesson, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-4">
+                <div
+                  key={idx}
+                  className="flex flex-col items-center gap-4 h-52 w-64"
+                >
                   <div className="border-[2px] border-gray-300 p-6 shadow-lg hover:scale-110 duration-200 cursor-pointer rounded-lg relative">
                     {lesson.isNew && (
                       <div className="bg-green-500 text-center text-white  rounded-full text-sm absolute top-0.5 right-0.5 px-1">

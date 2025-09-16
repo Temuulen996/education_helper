@@ -19,18 +19,16 @@ const BooksPage = () => {
               setSelectedGrade(grade.value);
             }}
             key={grade.value}
-            className={`text-center font-semibold p-2 border-[1px] rounded-full shadow-md border-green-400 hover:scale-105 cursor-pointer duration-200 ${
-              selectedGrade === grade.value
-                ? "bg-green-400 text-white"
-                : "bg-white text-black"
+            className={`text-center font-semibold p-2 border-[1px] rounded-md shadow-md border-green-400 hover:scale-105 cursor-pointer duration-200 ${
+              selectedGrade === grade.value ? "bg-green-400 text-white" : ""
             }`}
           >
             {grade.label}
           </button>
         ))}
       </div>
-      <div className="bg-gray-300 p-4  font-semibold rounded-full">
-        Нүүр / 1-р анги
+      <div className="p-4  font-semibold rounded-full">
+        Нүүр / {selectedGrade}-р анги
       </div>
       <div className="flex flex-row flex-wrap">
         {books.map((book) => {
@@ -47,8 +45,8 @@ const BooksPage = () => {
                 src={book.img}
                 alt={book.name}
                 className="w-38 h-46 object-cover mb-2 hover:scale-110 duration-200 cursor-pointer"
-                width={152}
-                height={184}
+                width={50000}
+                height={50000}
               />
               <div
                 className="font-semibold text-wrap

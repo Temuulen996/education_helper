@@ -15,7 +15,7 @@ const HomePage = () => {
   const t = useTranslations("HomePage");
   const router = useRouter();
   useEffect(() => {
-    router.replace("/courses");
+    router.replace("/sign-in");
   }, []);
   return <div></div>;
 };

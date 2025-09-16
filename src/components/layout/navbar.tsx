@@ -179,15 +179,24 @@ const BNavbar: React.FC<BNavbarProps> = ({
 
         <div className="flex flex-row justify-between gap-4 items-center ">
           <div className="flex flex-row items-center gap-2">
-            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-full  font-bold  cursor-pointer  duration-200">
+            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-xl  font-bold  cursor-pointer  duration-200">
               <div className="text-lg ">0</div>
               <ThunderboltOutlined style={{ fontSize: "20px" }} />
             </div>
-            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-full  font-bold  cursor-pointer  duration-200">
+            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-xl  font-bold  cursor-pointer  duration-200">
               <div className="text-lg ">0</div>
               <KeyOutlined style={{ fontSize: "20px" }} />
             </div>
-            {renderUserMenu()}
+            <div className="h-12 w-12 rounded-full">
+              <Image
+                className="rounded-full w-full h-full object-cover"
+                width={50000}
+                height={5000}
+                alt="profile"
+                src="https://images.unsplash.com/photo-1629783509182-68c8c190e952?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </div>
+            {/* {renderUserMenu()} */}
           </div>
         </div>
       </div>
