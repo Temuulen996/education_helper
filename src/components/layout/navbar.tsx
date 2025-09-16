@@ -179,13 +179,15 @@ const BNavbar: React.FC<BNavbarProps> = ({
 
         <div className="flex flex-row justify-between gap-4 items-center ">
           <div className="flex flex-row items-center gap-2">
-            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-xl  font-bold  cursor-pointer  duration-200">
-              <div className="text-lg ">0</div>
-              <ThunderboltOutlined style={{ fontSize: "20px" }} />
+            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-yellow-500 rounded-xl  font-bold  cursor-pointer  duration-200">
+              <div className="text-lg text-yellow-500">1</div>
+              <ThunderboltOutlined
+                style={{ fontSize: "20px", color: "orange" }}
+              />
             </div>
-            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-gray-300 rounded-xl  font-bold  cursor-pointer  duration-200">
-              <div className="text-lg ">0</div>
-              <KeyOutlined style={{ fontSize: "20px" }} />
+            <div className="py-1 px-4 border-2 flex items-center justify-between gap-3 border-green-600 rounded-xl  font-bold  cursor-pointer  duration-200">
+              <div className="text-lg text-green-600">2</div>
+              <KeyOutlined style={{ fontSize: "20px", color: "green" }} />
             </div>
             <div className="h-12 w-12 rounded-full">
               <Image

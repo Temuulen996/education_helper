@@ -39,7 +39,7 @@ const VideoCoursesPage = () => {
             >
               <Image
                 onClick={() => {
-                  router.push(`/books/1`);
+                  router.push(`/video-courses/1`);
                 }}
                 src={book.img}
                 alt={book.name}
