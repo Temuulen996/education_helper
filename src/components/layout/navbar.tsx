@@ -162,7 +162,7 @@ const BNavbar: React.FC<BNavbarProps> = ({
       {/* Desktop Navbar */}
       <div className="hidden md:flex justify-between items-center px-[15%] p-2">
         <div className="flex items-center">
-          <Link href="/">
+          <Link href="/courses">
             <div className="logo flex items-center gap-2 h mr-12 cursor-pointer">
               <Image
                 src={Logo}

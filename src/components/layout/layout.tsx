@@ -38,6 +38,7 @@ const BLayout: React.FC<BLayoutProps> = ({ children }: BLayoutProps) => {
   const menuItems = [
     { label: "Сургалтууд", key: "/courses" },
     { label: "Сурах бичиг", key: "/books" },
+    { label: "Видео сургалтууд", key: "/video-courses" },
   ];
   const mobileBottomTabs = [
     {

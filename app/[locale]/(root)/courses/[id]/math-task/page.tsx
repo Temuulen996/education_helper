@@ -5,7 +5,7 @@ import ColorShapeTask from "@/src/components/color_shape_task/color-shape-task";
 
 // OpenAI API Key (ensure it is securely stored in your environment)
 const OPENAI_API_KEY =
-  "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";
+  "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";
 
 const TaskPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -87,7 +87,7 @@ const TaskPage = () => {
       body: JSON.stringify({
         model: "gpt-4",
         messages: [{ role: "user", content: userMessage }],
-        max_tokens: 150,
+        max_tokens: 200,
       }),
     });
 
@@ -126,7 +126,7 @@ const TaskPage = () => {
     // Show ChatGPT after 3 mistakes
     if (mistakes + 1 === 3) {
       let firstQuestion = tasks[currentStep].gptQuestion;
-      sendMessageToChatGPT(`${firstQuestion}`);
+      sendMessageToChatGPT(`${firstQuestion} +. Монгол хэлээр тайлбарлаарай`);
       setDrawerVisible(true); // Show the chat drawer after 3 mistakes
     }
   };
@@ -157,7 +157,7 @@ const TaskPage = () => {
 
       {/* Chat Sidebar using Ant Design Drawer (Visible after 3 mistakes) */}
       <Drawer
-        title="Assistance"
+        title="Чамд тусалъя"
         placement="right"
         width={400}
         onClose={() => {
