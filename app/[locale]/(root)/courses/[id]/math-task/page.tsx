@@ -4,8 +4,7 @@ import { Steps, Drawer, Button, Input, notification } from "antd";
 import ColorShapeTask from "@/src/components/color_shape_task/color-shape-task";
 
 // OpenAI API Key (ensure it is securely stored in your environment)
-const OPENAI_API_KEY =
-  "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";
+const OPENAI_API_KEY = ""
 
 const TaskPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -92,7 +91,6 @@ const TaskPage = () => {
     const data = await response.json();
     const botResponse = data.choices[0].message.content;
 
-    // Type the bot's response with a typing effect
     typeBotResponse(botResponse);
   };
 
@@ -104,27 +102,22 @@ const TaskPage = () => {
     e.preventDefault();
     if (userInput.trim()) {
       sendMessageToChatGPT(userInput);
-      setUserInput(""); // Clear input field after submitting
+      setUserInput(""); 
     }
   };
 
   const checkAnswer = (res: any) => {
     if (res === false) {
-      setMistakes((prev) => prev + 1); // Increment mistake count
+      setMistakes((prev) => prev + 1); 
     } else if (res === true && currentStep < tasks.length - 1) {
       setCurrentStep((prev) => Math.min(prev + 1, tasks.length - 1));
-      setMistakes(0); // Reset mistake count when moving to the next task
+      setMistakes(0); 
     } else if (res === true && currentStep === tasks.length - 1) {
-      // Task completed successfully
+      
       notification.success({
         message: "Congratulations!",
         description: "You've completed all tasks successfully! 🎉",
-        duration: 3, // Notification duration (in seconds)
-        style: {
-          backgroundColor: "#52c41a", // Green color for success
-          color: "#fff",
-          fontWeight: "bold",
-        },
+        duration: 3, 
       });
     }
 
@@ -162,7 +155,7 @@ const TaskPage = () => {
 
       {/* Chat Sidebar using Ant Design Drawer (Visible after 3 mistakes) */}
       <Drawer
-        title="ChatGPT Assistance"
+        title="Assistance"
         placement="right"
         width={400}
         onClose={() => {

@@ -5,10 +5,10 @@ import global from "../../../../../public/globe.svg";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { CheckCircle, Lock, Unlock } from "lucide-react";
-
+import {useRouter} from "next/navigation";
 const Index = () => {
   const [active, setActive] = useState("Finding Half");
-
+  const router = useRouter();
   const levels1 = [
     { name: "Аравтын ба энгийн бутархай", status: "done" },
     { name: "Тоон олонлог язгуур", status: "unlock" },
@@ -75,9 +75,10 @@ const Index = () => {
                   key={idx}
                   whileHover={level.status === "done" ? { scale: 1.05 } : {}}
                   className="flex flex-col items-center cursor-pointer"
-                  onClick={() =>
+                  onClick={() =>{
                     level.status === "done" && setActive(level.name)
-                  }
+                    router.push(`/courses/1/math-task`)
+                  }}
                 >
                   <div
                     className={`w-20 h-20 flex items-center justify-center rounded-full shadow-xl border-2 transition-all duration-200
