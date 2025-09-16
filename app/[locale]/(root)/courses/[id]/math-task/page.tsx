@@ -9,7 +9,9 @@ const OPENAI_API_KEY =
 
 const TaskPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
-  const [chatMessages, setChatMessages] = useState<{ user: string; bot: string }[]>([]);
+  const [chatMessages, setChatMessages] = useState<
+    { user: string; bot: string }[]
+  >([]);
   const [userInput, setUserInput] = useState("");
   const [mistakes, setMistakes] = useState(0); // Track the number of mistakes
   const [showChat, setShowChat] = useState(false); // Show ChatGPT after 3 mistakes
@@ -21,21 +23,21 @@ const TaskPage = () => {
       sections: 2,
       colorFraction: 1,
       gptQuestion: "Please explain Fraction in Math and 1/2 ",
-      taskMessage: "Color 1/2 of the shape",
+      taskMessage: "Хүснэгтийн 1/2 хэсгийг өнгөөр будна уу.",
     },
     {
       title: "Task 2",
       sections: 3,
       colorFraction: 2,
       gptQuestion: "Please explain Fraction in Math and 2/3 ",
-      taskMessage: " Color 2/3 of the shape",
+      taskMessage: "Хүснэгтийн 2/3 хэсгийг өнгөөр будна уу.",
     },
     {
       title: "Task 3",
       sections: 4,
       colorFraction: 3,
       gptQuestion: "Please explain Fraction in Math and 3/4 ",
-      taskMessage: "Color 3/4 of the shape",
+      taskMessage: "Хүснэгтийн 3/4 хэсгийг өнгөөр будна уу.",
     },
   ];
 
@@ -103,22 +105,21 @@ const TaskPage = () => {
     e.preventDefault();
     if (userInput.trim()) {
       sendMessageToChatGPT(userInput);
-      setUserInput(""); 
+      setUserInput("");
     }
   };
 
   const checkAnswer = (res: any) => {
     if (res === false) {
-      setMistakes((prev) => prev + 1); 
+      setMistakes((prev) => prev + 1);
     } else if (res === true && currentStep < tasks.length - 1) {
       setCurrentStep((prev) => Math.min(prev + 1, tasks.length - 1));
-      setMistakes(0); 
+      setMistakes(0);
     } else if (res === true && currentStep === tasks.length - 1) {
-      
       notification.success({
         message: "Congratulations!",
         description: "You've completed all tasks successfully! 🎉",
-        duration: 3, 
+        duration: 3,
       });
     }
 

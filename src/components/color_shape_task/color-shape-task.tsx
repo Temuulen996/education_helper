@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const ColorShapeTask = ({
   sections = 2,
   colorFraction = 1,
-  taskMessage = "Color 1/2 of the shape",
+  taskMessage = "Хүснэгтийн 1/2 хэсгийг өнгөөр будна уу.",
   checkAnswer1 = () => {},
 }: {
   sections: number;
@@ -77,11 +77,11 @@ const ColorShapeTask = ({
 
   return (
     <div style={styles.container}>
-      <div style={styles.title}>Finding Fraction</div>
+      <div style={styles.title}>Математикийн Сэтгэхүй</div>
       <div style={styles.instruction}>{taskMessage}</div>
       <div style={styles.shapeContainer}>{renderSections()}</div>
       <div>
-        <label htmlFor="colorPicker">Choose a color: </label>
+        <label htmlFor="colorPicker">Өөрт тохирсон өнгө сонгох: </label>
         <input
           type="color"
           id="colorPicker"
@@ -92,18 +92,18 @@ const ColorShapeTask = ({
       <div style={styles.feedback}>
         {isCorrect === null ? (
           <button onClick={checkAnswer} style={styles.checkButton}>
-            Check Answer
+            Хариу шалгах
           </button>
         ) : isCorrect ? (
-          <div style={{ color: "green", fontSize: "20px" }}>Correct!</div>
+          <div style={{ color: "green", fontSize: "20px" }}>Зөв хариуллаа!</div>
         ) : (
           <div style={{ color: "red", fontSize: "20px" }}>
-            Incorrect, try again.
+            Буруу хариулсан байна, дахин оролдоно уу.
           </div>
         )}
       </div>
       <button onClick={resetTask} style={styles.resetButton}>
-        Start Over
+        Дахин эхлэх
       </button>
     </div>
   );
