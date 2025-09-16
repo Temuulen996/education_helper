@@ -9,8 +9,8 @@ import { Avatar } from "antd";
 
 const BFooter = () => {
   return (
-    <div className="border-t-[1px] h-full border-gray-400 flex items-center w-full border-dashed py-4 md:px-0">
-      <div className=" flex flex-col md:flex-row justify-between w-full items-center gap-y-3 md:gap-y-0  px-4 ">
+    <div className="border-t-[1px] h-full border-gray-400 flex items-center w-full border-dashed py-4 md:px-0 ">
+      <div className=" flex flex-col md:flex-row justify-between w-full items-center gap-y-3 md:gap-y-0 px-[15%]">
         <section className="flex flex-col items-start text-sm font-bold">
           <p className=" text-center">
             <BText

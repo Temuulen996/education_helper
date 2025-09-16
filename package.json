@@ -1,5 +1,5 @@
 {
-  "name": "bakery_web",
+  "name": "education_helper",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "@ant-design/icons": "^5.5.2",
     "@ant-design/icons-svg": "^4.4.2",
     "@ant-design/nextjs-registry": "^1.0.2",
+    "@fortawesome/fontawesome-free": "^7.0.1",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-avatar": "^1.1.7",
@@ -42,7 +43,11 @@
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.56.1",
+    "react-pageflip": "^2.0.3",
+    "react-reader": "^2.0.13",
     "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.5",
+    "reactjs-editor": "^10.0.1",
     "recharts": "^2.15.3",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.2.0",

@@ -1,5 +1,7 @@
+"use client";
 import { Divider } from "antd";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const data = [
   {
@@ -83,6 +85,7 @@ const data = [
   },
 ];
 const CoursesPage = () => {
+  const router = useRouter();
   return (
     <div>
       <div className="my-4">
@@ -117,6 +120,9 @@ const CoursesPage = () => {
                       </div>
                     )}
                     <Image
+                      onClick={() => {
+                        router.push("/courses/1");
+                      }}
                       className="h-24 w-24"
                       width={500}
                       height={500}

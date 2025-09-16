@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       "play-lh.googleusercontent.com",
       "image.similarpng.com",
       "ds055uzetaobb.cloudfront.net",
+      "econtent.edu.mn",
     ],
   },
   env: {

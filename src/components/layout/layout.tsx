@@ -36,8 +36,8 @@ const BLayout: React.FC<BLayoutProps> = ({ children }: BLayoutProps) => {
     setIsClient(true);
   }, []);
   const menuItems = [
-    { label: "Нүүр", key: "/" },
     { label: "Сургалтууд", key: "/courses" },
+    { label: "Сурах бичиг", key: "/books" },
   ];
   const mobileBottomTabs = [
     {
@@ -67,16 +67,16 @@ const BLayout: React.FC<BLayoutProps> = ({ children }: BLayoutProps) => {
     dispatch(toggleCartDrawer(false));
   };
   return (
-    <Layout className="mx-0 gap-4 h-screen text-foreground">
+    <Layout className=" gap-4 h-screen text-foreground">
       <Content className="flex flex-col h-full">
-        <div className="h-auto">
+        <div className="h-auto ">
           <BNavbar
             showSideBar={showSideBar}
             closeSideBar={closeSideBar}
             menuItems={menuItems}
           />
         </div>
-        <div className="overflow-auto h-10/12 px-[5%] py-4">
+        <div className="overflow-auto h-10/12 px-[15%] py-4 ">
           <div>{children}</div>
         </div>
         <div className="h-1/12 hidden md:block">
