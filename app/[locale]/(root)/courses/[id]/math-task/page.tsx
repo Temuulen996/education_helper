@@ -4,7 +4,8 @@ import { Steps, Drawer, Button, Input, notification } from "antd";
 import ColorShapeTask from "@/src/components/color_shape_task/color-shape-task";
 
 // OpenAI API Key (ensure it is securely stored in your environment)
-const OPENAI_API_KEY = ""
+const OPENAI_API_KEY =
+  "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";
 
 const TaskPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
